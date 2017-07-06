@@ -1,0 +1,51 @@
+# Site settings
+title: 博客
+email: XXX@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://sccbhxc.github.io/ # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: sccbhxc
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+twitter: XXX
+weibo: XXX
+github: sccbhxc
+instagram: XXX
+linkedin: XXX
+
+# avatar and Favicon
+avatar: /assets/img/site-avatar.png
+favicon: /assets/img/site-favicon.ico
+
+# disqus config
+disqus:
+  shortname: sccbhxc
+  
+# google analytics config
+ga:
+  id: UA-102150565-1
+  url: sccbhxc.github.io
+
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
