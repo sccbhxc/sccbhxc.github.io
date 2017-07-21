@@ -2,7 +2,7 @@
 layout: post
 title: Tensorflow常用API总结
 category: 框架
-tag：Deep-Learning
+tag: Deep-Learning
 description: 总结Tensorflow中常用API
 ---
 

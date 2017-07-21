@@ -2,7 +2,7 @@
 layout: post
 title: Tensorflow数据读取
 category: 框架
-tag：Deep-Learning
+tag: Deep-Learning
 description: 总结Tensorflow数据批量读取的方法
 ---
 
