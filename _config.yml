@@ -29,9 +29,9 @@ disqus:
   shortname: sccbhxc
   
 # google analytics config
-ga:
-  id: UA-102150565-1
-  url: sccbhxc.github.io
+#ga:
+#  id: UA-102150565-1
+#  url: sccbhxc.github.io
 
 
 # Build settings
