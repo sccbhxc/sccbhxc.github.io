@@ -33,8 +33,8 @@ forward_all() # Run net forward in batches.
 forward_backward_all() # Run net forward + backward in batches.
 
 # 对学习参数进行处理
-clear_param_diffs(...)
-copy_from(...)
+clear_param_diffs(...) # 清除所有网络参数的梯度(置零)
+copy_from(...) # 从另外一个Net对象中复制网络参数
 
 # 保存参数
 load_hdf5(...)
@@ -45,7 +45,7 @@ save(...)
 reshape(...)
 
 set_input_arrays() # Set input arrays of the in-memory MemoryDataLayer
-share_with(...)
+share_with(...) # 和另外一个Net对象共享网络参数
 ```
 
 
@@ -102,7 +102,7 @@ restore(...) # restore the state from the appropriate snapshot type.
 snapshot(...) # produces a SolverState protocol buffer that needs to be written to disk together with the learned net.
 
 solve(...) # resume training for a pre-trained net
-step(...)
+step(...) # 进行一次forward和backward，并更新参数
 ```
 
 
@@ -110,8 +110,8 @@ step(...)
 ### Member Variable
 
 ```python
-iter #
-net # 
+iter # 当前迭代次数
+net # 需要优化的网络
 param #
 test_nets #
 ```
