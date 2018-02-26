@@ -54,7 +54,7 @@ solver.net.save('name.caffemodel')
 
 
 
-##加载已训练Model
+## 加载已训练Model
 
 ```python
 # ------- 从已有caffemodel中加载 -------
