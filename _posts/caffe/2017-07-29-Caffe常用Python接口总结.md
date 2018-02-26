@@ -19,11 +19,11 @@ description: 总结了Caffe中常用的接口
 ```python
 __init__(...)
 
-# Callbacks，回调
-after_backward()
-after_forward()
-before_backward()
-before_forward()
+# Callbacks，回调，用法详见https://github.com/BVLC/caffe/blob/master/python/train.py
+after_backward(...) # 在backward函数结束后，调用对应的回调函数
+after_forward(...)
+before_backward(...)
+before_forward(...)
 
 # 网络运行
 backward() # prepare inputs and run the net forward
@@ -216,21 +216,21 @@ to_proto()
 
 ```python
 # 日志
-init_log()
-log()
+init_log() # 初始化log
+log(...) # str类型，用于输出log的python接口
 
 # 设置计算设备
 set_mode_cpu()
 set_mode_gpu()
 set_device(...)
-set_multiprocess(...) # 设置使用几个cpu核心
+set_multiprocess(...) # 是否打开多核，True/False
 
 # solver,Parallel training
-get_solver(...)
+get_solver(...) # 根据solver.prototxt得到Solver对象
 solver_count()
-set_solver_count()
+set_solver_count(...) # 设置几个solver(相当于用于并行的GPU个数)
 solver_rank()
-set_solver_rank()
+set_solver_rank(...) # 设置sovler的rank
 
 # 其他
 layer_type_list()
