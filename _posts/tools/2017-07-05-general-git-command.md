@@ -15,6 +15,16 @@ git clone https://github.com/php/php-src.git
 git clone --depth=1 https://github.com/php/php-src.git # 只抓取最近的一次 commit
 ```
 
+## 修改远程仓储
+
+```bash
+# 修改与远程仓储的关联地址
+git remote rm origin # 先删除原来的远程仓储的关联地址
+git remote add origin git@github.com:Liutos/foobar.git # 关联新的远程仓储地址
+```
+
+
+
 ## 历史管理
 
 ### 查看历史

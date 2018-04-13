@@ -65,9 +65,9 @@ net = caffe.Net(
 		)
 # ------- 从已有solverstate中恢复训练 -------
 solver.restore('path/to/solver.solverstate')
+net2.copy_from('path/to/net.caffemodel')
 # ------- 从已有Net对象中共享得到 -------
 net2.share_with(net1)           # net2共享net1的权重(权重指针指向同一地址)
-net2.copy_from(net1)            # net2复制net1的权重(权重指针不指向同一地址)
 ```
 
 
