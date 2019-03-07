@@ -124,6 +124,17 @@ plt.imshow(img, cmap='gist_earth', interpolation='nearest')
 
  
 
+### 9. 将Matplotlib输出的结果保存成和原图一样大小的图片
+
+```python
+img_np = np.array(img).astype(np.float)[:,:,0]
+img_np /= 255.0
+img_plt = plt.imshow(img_np)
+im_heatmap = np.uint8(img_plt.get_cmap()(img_plt.get_array()) * 255)
+```
+
+
+
 
 
 ### 参考
