@@ -27,8 +27,6 @@ plt.show() # 注意与plt.imshow()的区别（用于显示图像或者二维数�
 
 ### 2. matplotlib面向对象 (指定局部绘图对象)
 
-
-
 ```python
 fig = plt.figure()
 
@@ -45,8 +43,6 @@ axes.set_title('title') # 设置标题
 
 
 ### 3. 同时放置多个图表
-
-
 
 ```python
 fig, axes = plt.subplot(nrow=1, ncols =2)
@@ -65,7 +61,7 @@ fig.tight_layout() # 紧凑布局
 ### 4. 设置图标的尺寸
 
 ```python
-fig = plt.figure(figsize=(8,4), dpi=100)
+fig = plt.figure(figsize=(8,4), dpi=100) # 输出的figure窗口的大小
 ```
 
 
@@ -111,6 +107,9 @@ rcParams.update({'font.size': 18, 'font.family': 'STIXGeneral', 'mathtext.fontse
 # 用Latex渲染
 rcParams.update({'font.size': 18, 'text.usetex': True})
 
+# 设置自定义字体
+import matplotlib
+myfont = matplotlib.font_manager.FontProperties(fname=r'C:/Windows/Fonts/msyh.ttf') 
 ```
 
 
@@ -134,6 +133,53 @@ im_heatmap = np.uint8(img_plt.get_cmap()(img_plt.get_array()) * 255)
 ```
 
 
+
+### 10. 自定义配色
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+_tab20bplus= [
+    '#272822',
+    '#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939',
+    '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39',
+    '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b',
+    '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6',
+]
+
+def tab20bplus():
+    # return mpl.colors.LinearSegmentedColormap.\
+    #     from_list(
+    #     'cmap', _tab20bplus, 21) # 插值成21个，会出现颜色区分度低的情况，不适合于表达离散的类别
+    return mpl.colors.ListedColormap(_tab20bplus, 'indexed')
+
+color_result = plt.imshow(result, cmap=tab20bplus())
+```
+
+
+
+### 11. 绘图参数设置
+
+绘图**默认参数**通常保存在以下目录文件中：`plot/Lib/site-packages/matplotlib/mpl-data/matplotlibrc`，代码中需要进行设置时，可以参考这里面的参数。
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib.pylab as pylab
+# 主要修改参数的方法主要有以下几种
+# ------- 方法1：适合于批量修改参数 -------
+params = {
+            'axes.labelsize': '16',
+            'xtick.labelsize': '16',
+            'ytick.labelsize': '13',
+            'lines.linewidth': '2',
+            'legend.fontsize': '20',
+            'figure.figsize': '26, 24'  # set figure size
+        }
+pylab.rcParams.update(params)
+# ------- 方法2：适合于修改少量参数 -------
+plt.rcParams['figure.figsize'] = (8.0, 4.0)
+```
 
 
 
