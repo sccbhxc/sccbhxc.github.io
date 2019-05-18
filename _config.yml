@@ -38,6 +38,11 @@ disqus:
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 mathjax: disabled
 sass:
   style: compressed
