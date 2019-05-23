@@ -6,3 +6,8 @@
 4. 修改CNAME，或者删掉这个文件，使用默认域名
 5. 修改`_config.yml`配置项
 6. It's done!
+
+### 网页设置
+
+- 网页样式：`css/main.sass`，包括Font、Sidebar、Search Box、TOC和Post等的样式
+- 资源：`assets`目录

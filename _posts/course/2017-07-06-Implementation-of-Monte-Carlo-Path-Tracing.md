@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Monte Carlo Path Tracing算法实现
-category: 课程
+category: 其他
 tags: Computer-Graphic
 description: 介绍了实现的Monte Carlo Path Tracing程序的功能、算法数据结构
 ---

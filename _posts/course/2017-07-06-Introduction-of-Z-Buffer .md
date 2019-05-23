@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scan Line Z-Buffer 算法实现功能介绍
-category: 课程
+category: 其他
 tags: Computer-Graphic
 description: 介绍了实现的Z-Buffer程序的功能、算法数据结构和性能表现
 ---
